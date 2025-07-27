@@ -1,8 +1,153 @@
+/* 
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+> 💡 These are just the design sizes. Ensure content is responsive and meets WCAG requirements by testing the full range of screen sizes from 320px to large screens.
+
+## Colors
+
+### Primary
+
+Gold 500: hsl(31, 77%, 52%)
+Cyan 800: hsl(184, 100%, 22%)
+Green 950: hsl(179, 100%, 13%)
+
+### Neutral
+
+Transparent white (paragraphs): hsla(0, 0%, 100%, 0.75)
+Gray 100 (background, headings, buttons): hsl(0, 0%, 95%)
+
+## Typography
+
+### Body Copy
+
+- Font size: 15px
+
+### Font
+
+- Family: [Lexend Deca](https://fonts.google.com/specimen/Lexend+Deca)
+- Weights: 400
+
+- Family: [Big Shoulders Display](https://fonts.google.com/specimen/Big+Shoulders+Display)
+- Weights: 700 */
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
+body {
+  line-height: 1;
+  font-family: "Lexend Deca", sans-serif;
+  font-weight: 400;
+  min-height: 100vh;
+}
 html {
   font-size: 62.5%;
+}
+.container {
+  margin: 16rem auto;
+  max-width: 96rem;
+  border-radius: 13px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.card {
+  padding: 4rem;
+  transition: all 0.3s ease;
+}
+.card:nth-of-type(1) {
+  border-top-left-radius: 13px;
+  border-bottom-left-radius: 13px;
+  background-color: hsl(31, 77%, 52%);
+}
+.card:nth-of-type(2) {
+  background-color: hsl(184, 100%, 22%);
+}
+.card:nth-of-type(3) {
+  border-top-right-radius: 13px;
+  border-bottom-right-radius: 13px;
+  background-color: hsl(179, 100%, 13%);
+}
+.card:hover {
+  transform: translateY(-20px);
+}
+.card:nth-of-type(1):hover {
+  border-top-right-radius: 13px;
+  border-bottom-right-radius: 13px;
+}
+.card:nth-of-type(2):hover {
+  border-radius: 13px;
+}
+
+.card:nth-of-type(3):hover {
+  border-top-left-radius: 13px;
+  border-bottom-left-radius: 13px;
+}
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 6rem;
+  width: 6rem;
+}
+.logo img {
+  width: 100%;
+}
+.card-title {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  font-size: 3rem;
+  font-family: "Big Shoulders", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: hsl(0, 0%, 95%);
+}
+.card-description {
+  font-size: 1.55rem;
+  color: hsla(0, 0%, 100%, 0.75);
+  line-height: 1.6;
+}
+.card-btn {
+  text-decoration: none;
+  display: inline-block;
+  padding: 1.4rem 2.8rem;
+  background-color: hsl(0, 0%, 95%);
+  border-radius: 26px;
+  margin-top: 6rem;
+  cursor: pointer;
+  font-size: 1.3rem;
+  border: 2px solid hsl(0, 0%, 95%);
+  /* height: 100%; */
+  transition: all 0.3s ease;
+}
+.btn--1 {
+  color: hsl(31, 77%, 52%);
+}
+.btn--2 {
+  color: hsl(184, 100%, 22%);
+}
+.btn--3 {
+  color: hsl(179, 100%, 13%);
+}
+
+.card-btn:hover {
+  color: hsl(0, 0%, 95%);
+  transform: scale(1.05);
+  font-size: 1.4rem;
+}
+.btn--1:hover {
+  background-color: hsl(31, 77%, 52%);
+}
+.btn--2:hover {
+  background-color: hsl(184, 100%, 22%);
+}
+.btn--3:hover {
+  background-color: hsl(179, 100%, 13%);
 }
